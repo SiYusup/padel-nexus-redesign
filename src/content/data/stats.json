@@ -1,0 +1,5 @@
+[
+  { "id": "lapangan", "label": "Lapangan", "value": 4, "suffix": "", "isDummy": true },
+  { "id": "anggota", "label": "Anggota komunitas", "value": 350, "suffix": "+", "isDummy": true },
+  { "id": "sesi", "label": "Sesi bermain per bulan", "value": 800, "suffix": "+", "isDummy": true }
+]

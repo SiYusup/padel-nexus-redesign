@@ -1,0 +1,164 @@
+[
+  {
+    "id": "kanopi-lapangan",
+    "type": "foto",
+    "src": "/ai/lapangan-kanopi.webp",
+    "alt": "Ilustrasi deretan lapangan padel indoor di bawah kanopi baja, berdinding kaca dan jaring dengan rumput sintetis hijau",
+    "category": "lapangan",
+    "width": 2048,
+    "height": 1152
+  },
+  {
+    "id": "siap-menerima-bola",
+    "type": "foto",
+    "src": "/ai/siap-menerima-bola.webp",
+    "alt": "Ilustrasi dua pemain bersiap menerima bola di lapangan indoor, satu bola terlihat di udara",
+    "category": "pemain",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "dinding-kaca",
+    "type": "foto",
+    "src": "/ai/lorong-dinding-kaca.webp",
+    "alt": "Ilustrasi lorong samping lapangan dengan dinding kaca, tiang baja hitam, dan bangku anyam krem",
+    "category": "lapangan",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "lounge-batu-tv",
+    "type": "foto",
+    "src": "/ai/lounge-batu-tv.webp",
+    "alt": "Ilustrasi lounge dengan dinding batu hangat, kursi kayu beranyam hijau, dan layar mati",
+    "category": "lounge",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "pelat-rumput",
+    "type": "foto",
+    "src": "/ai/makro-rumput-pelat.webp",
+    "alt": "Ilustrasi makro tepi rumput sintetis lapangan bertemu pelat logam penahan",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "tas-di-net",
+    "type": "foto",
+    "src": "/ai/tas-di-net.webp",
+    "alt": "Ilustrasi pemain berdiri di garis tengah net membawa tas bahu berisi raket",
+    "category": "pemain",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "sofa-kaca-batu",
+    "type": "foto",
+    "src": "/ai/sofa-kaca-batu.webp",
+    "alt": "Ilustrasi sofa krem dan cermin berbingkai batu di lounge berdinding terakota",
+    "category": "lounge",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "meja-hadap-lapangan",
+    "type": "foto",
+    "src": "/ai/meja-hadap-lapangan.webp",
+    "alt": "Ilustrasi meja kayu dan kursi anyam krem menghadap langsung ke lapangan lewat dinding kaca",
+    "category": "lounge",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "tiga-orang-terawa",
+    "type": "foto",
+    "src": "/ai/tiga-orang-terawa.webp",
+    "alt": "Ilustrasi tiga orang berbeda usia tertawa di bangku anyam samping lapangan dengan handuk dan botol minum",
+    "category": "lounge",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "pemain-senior",
+    "type": "foto",
+    "src": "/ai/pemain-senior.webp",
+    "alt": "Ilustrasi pemain berusia enam puluhan berkacamata mengayun raket di dekat dinding kaca dengan kipas dinding di atasnya",
+    "category": "pemain",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "loker-pribadi",
+    "type": "foto",
+    "src": "/ai/loker-sage.webp",
+    "alt": "Ilustrasi deretan loker hijau sage berbingkai kuningan dengan kunci terpasang di dinding batu",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "handuk-dingin",
+    "type": "foto",
+    "src": "/ai/handuk-dingin.webp",
+    "alt": "Ilustrasi tangan mengambil handuk putih bergulung dari dispenser berembun",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "pendingin-portabel",
+    "type": "foto",
+    "src": "/ai/pendingin-portabel.webp",
+    "alt": "Ilustrasi pendingin udara portabel putih berdiri di sisi meja kayu dan kursi anyam dekat dinding terakota",
+    "category": "lounge",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "rak-bar",
+    "type": "foto",
+    "src": "/ai/rak-bar-terang.webp",
+    "alt": "Ilustrasi rak kayu bercahaya berisi gelas dan perkakas kopi di atas meja bar batu gelap",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "cangkir-espresso",
+    "type": "foto",
+    "src": "/ai/cangkir-di-mesin.webp",
+    "alt": "Ilustrasi deretan cangkir keramik terbalik di atas permukaan krom mesin espresso",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "raket-di-bangku",
+    "type": "foto",
+    "src": "/ai/raket-bola-di-bangku.webp",
+    "alt": "Ilustrasi dua raket padel tanpa merek dan tiga bola tersusun di bangku anyam krem",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "raket-tumpuk",
+    "type": "foto",
+    "src": "/ai/raket-tumpuk.webp",
+    "alt": "Ilustrasi tiga raket padel gelap bersandar pada bangku anyam hijau",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  },
+  {
+    "id": "tas-raket-terbuka",
+    "type": "foto",
+    "src": "/ai/tas-raket-terbuka.webp",
+    "alt": "Ilustrasi tas raket terbuka berisi dua raket di rumput lapangan dengan dua bola di sampingnya",
+    "category": "detail",
+    "width": 1408,
+    "height": 1760
+  }
+]

@@ -1,0 +1,605 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Padel Demo design tokens (v4, "Court Atlas").
+  Referensi: DESIGN.md. Kertas kapur, tinta biru-hitam, biru lapangan,
+  satu aksen sinyal oranye. Archivo + IBM Plex Mono. Sudut tajam, garis tipis.
+*/
+
+:root {
+  color-scheme: light;
+
+  --chalk: #edf0eb;
+  --concrete: #dde3df;
+  --surface: #f8f9f5;
+  --ink: #0b1519;
+  --ink-soft: #4d5a60;
+  --ink-faint: #586468;
+  --line: rgba(11, 21, 25, 0.16);
+  --grid-line: rgba(11, 21, 25, 0.08);
+
+  --court: #123b4a;
+  --court-lit: #0e2f3b;
+  --on-court: #f8f9f5;
+  --on-court-soft: #c3d6d7;
+  --on-court-faint: #a9c2c4;
+
+  --signal: #d94f2b;
+  --signal-deep: #b23a1c;
+  --on-signal: #081217;
+  --mist: #c9d8d8;
+
+  --focus: #b23a1c;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --text-xs: 0.75rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.15rem, 1.08rem + 0.3vw, 1.3rem);
+  --text-h3: clamp(1.3rem, 1.12rem + 0.72vw, 1.7rem);
+  --text-h2: clamp(2.15rem, 1.35rem + 3.1vw, 4.25rem);
+  --text-display: clamp(3.35rem, 0.4rem + 10.4vw, 9rem);
+
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --section: clamp(4.5rem, 10vw, 9rem);
+  --measure: 64ch;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --chalk: #081217;
+  --concrete: #0d1b21;
+  --surface: #11242c;
+  --ink: #f1eee5;
+  --ink-soft: #b7c3c4;
+  --ink-faint: #9fb0b3;
+  --line: rgba(241, 238, 229, 0.2);
+  --grid-line: rgba(241, 238, 229, 0.08);
+
+  --court: #1b4e63;
+  --court-lit: #23647a;
+  --on-court: #f8f9f5;
+  --on-court-soft: #d0e0e0;
+  --on-court-faint: #b6cdce;
+
+  --signal: #ff7a4d;
+  --signal-deep: #ff9a75;
+  --on-signal: #081217;
+  --mist: #23383f;
+
+  --focus: #ff7a4d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --chalk: #081217;
+    --concrete: #0d1b21;
+    --surface: #11242c;
+    --ink: #f1eee5;
+    --ink-soft: #b7c3c4;
+    --ink-faint: #9fb0b3;
+    --line: rgba(241, 238, 229, 0.2);
+    --grid-line: rgba(241, 238, 229, 0.08);
+
+    --court: #1b4e63;
+    --court-lit: #23647a;
+    --on-court: #f8f9f5;
+    --on-court-soft: #d0e0e0;
+    --on-court-faint: #b6cdce;
+
+    --signal: #ff7a4d;
+    --signal-deep: #ff9a75;
+    --on-signal: #081217;
+    --mist: #23383f;
+
+    --focus: #ff7a4d;
+  }
+}
+
+@layer base {
+  html {
+    background: var(--chalk);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--chalk);
+    color: var(--ink);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: var(--text-base);
+    line-height: 1.65;
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  body[data-lightbox-open="true"] header,
+  body[data-lightbox-open="true"] [data-floating-action] {
+    visibility: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0;
+    max-width: var(--measure);
+    text-wrap: pretty;
+  }
+
+  .tabular,
+  time,
+  [data-numeric] {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+
+  ::selection {
+    background: var(--signal);
+    color: var(--on-signal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  .on-court :focus-visible,
+  .on-court:focus-visible {
+    outline-color: var(--on-court);
+  }
+
+  input,
+  textarea {
+    caret-color: var(--court);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink) var(--concrete);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--concrete);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--ink);
+    border: 2px solid var(--concrete);
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .section-y {
+    padding-block: var(--section);
+  }
+
+  .t-display,
+  .t-1 {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: var(--text-display);
+    font-weight: 800;
+    line-height: 0.86;
+    letter-spacing: -0.065em;
+  }
+
+  .t-2 {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: var(--text-h2);
+    font-weight: 700;
+    line-height: 0.94;
+    letter-spacing: -0.052em;
+  }
+
+  .t-3 {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: var(--text-h3);
+    font-weight: 650;
+    line-height: 1.12;
+    letter-spacing: -0.028em;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  /* Baris judul bertopeng: naik dari bawah saat dimuat (CSS murni, tanpa JS) */
+  .line-mask {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+  }
+  .line-mask > span {
+    display: block;
+    animation: line-rise 0.9s var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 80ms + 80ms);
+  }
+
+  /* Tombol */
+  .btn {
+    display: inline-flex;
+    min-height: 3.25rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0 1.35rem;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      background-color 0.3s var(--ease-out),
+      border-color 0.3s var(--ease-out),
+      color 0.3s var(--ease-out);
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--chalk);
+    border-color: var(--ink);
+  }
+  .btn-primary:hover {
+    background: var(--court);
+    border-color: var(--court);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn-outline:hover {
+    background: var(--ink);
+    color: var(--chalk);
+  }
+
+  .btn-signal {
+    background: var(--signal);
+    color: var(--on-signal);
+    border-color: var(--signal);
+  }
+  .btn-signal:hover {
+    background: var(--signal-deep);
+    border-color: var(--signal-deep);
+    color: var(--chalk);
+  }
+
+  .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* Baris interaktif: garis atas, panah bergeser, garis menjadi sinyal */
+  .row-link {
+    position: relative;
+    display: block;
+    border-top: 1px solid var(--line);
+    transition:
+      border-color 0.3s var(--ease-out),
+      background-color 0.3s var(--ease-out);
+  }
+  .row-link:hover,
+  .row-link:focus-within {
+    border-color: var(--signal);
+    background: var(--surface);
+  }
+  .row-link .row-arrow {
+    transition: transform 0.3s var(--ease-out);
+  }
+  .row-link:hover .row-arrow,
+  .row-link:focus-within .row-arrow {
+    transform: translateX(4px);
+  }
+
+  .on-court {
+    --line: rgba(248, 249, 245, 0.24);
+    background: var(--court);
+    color: var(--on-court);
+  }
+
+  .on-court .eyebrow,
+  .on-court .text-ink-faint {
+    color: var(--on-court-soft);
+  }
+
+  .chip {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition:
+      background-color 0.3s var(--ease-out),
+      border-color 0.3s var(--ease-out),
+      color 0.3s var(--ease-out);
+  }
+  .chip:hover {
+    border-color: var(--ink);
+    background: var(--surface);
+  }
+  .chip-active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--chalk);
+  }
+  .chip-active:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .plate-empty {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 8px;
+    top: -64px;
+    z-index: 200;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--chalk);
+    font-weight: 700;
+    transition: top 200ms var(--ease-out);
+  }
+  .skip-link:focus {
+    top: 8px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .measure {
+    max-width: var(--measure);
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Reveal saat scroll (Reveal.tsx): terlihat secara default, dipersenjatai oleh JS */
+[data-reveal="armed"] {
+  opacity: 0;
+  transform: translateY(14px);
+}
+[data-reveal="in"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.6s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.9s var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+/* Judul terpisah per kata (SplitHeading.tsx) */
+.split-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+}
+.split-word > span {
+  display: inline-block;
+}
+[data-split="armed"] .split-word > span {
+  transform: translateY(110%);
+}
+[data-split="in"] .split-word > span {
+  transform: none;
+  transition: transform 1s var(--ease-out);
+  transition-delay: calc(var(--w, 0) * 55ms);
+}
+
+@keyframes line-rise {
+  from {
+    transform: translateY(108%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes tab-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Animasi ringan pengganti framer-motion */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-fade-up {
+  animation: fade-up 0.45s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 40ms);
+}
+
+@keyframes menu-in {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.anim-menu-in {
+  animation: menu-in 0.55s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+@keyframes menu-item-in {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: none;
+  }
+}
+.anim-menu-item {
+  animation: menu-item-in 0.8s var(--ease-out) both;
+  animation-delay: calc(0.15s + var(--i, 0) * 50ms);
+}
+
+@keyframes fab-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-fab-in {
+  animation: fab-in 0.3s var(--ease-out) both;
+}
+
+@keyframes panel-next {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes panel-prev {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-panel-next {
+  animation: panel-next 0.45s var(--ease-out) both;
+}
+.anim-panel-prev {
+  animation: panel-prev 0.45s var(--ease-out) both;
+}
+
+@keyframes slide-next {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slide-prev {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-slide-next {
+  animation: slide-next 0.6s var(--ease-out) both;
+}
+.anim-slide-prev {
+  animation: slide-prev 0.6s var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

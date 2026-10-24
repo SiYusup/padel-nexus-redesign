@@ -1,0 +1,8 @@
+[
+  { "id": "seluruh-tubuh", "title": "Menggerakkan seluruh tubuh", "description": "Berlari kecil, bergeser, dan mengayun melibatkan kaki, inti tubuh, dan lengan sekaligus.", "icon": "Activity" },
+  { "id": "kardio", "title": "Kardio yang bisa diatur", "description": "Intensitas bisa santai atau lebih menantang, tergantung ritme bermain dan kondisi tiap orang.", "icon": "HeartPulse" },
+  { "id": "reli-panjang", "title": "Reli panjang, cepat terasa seru", "description": "Bola yang boleh memantul di dinding membuat permainan lebih berkesinambungan, ramah bagi pemula.", "icon": "Repeat" },
+  { "id": "koordinasi", "title": "Koordinasi dan fokus", "description": "Membaca arah bola dan memilih pukulan melatih koordinasi mata, tangan, dan pengambilan keputusan.", "icon": "Focus" },
+  { "id": "sosial", "title": "Dimainkan bersama", "description": "Bermain berpasangan membuat olahraga terasa seperti kegiatan sosial, bukan sekadar rutinitas.", "icon": "Users" },
+  { "id": "semua-umur", "title": "Bisa disesuaikan untuk banyak usia", "description": "Gerakan dan ritme dapat disesuaikan. Tetap konsultasikan dengan dokter bila punya kondisi kesehatan tertentu.", "icon": "ShieldCheck" }
+]

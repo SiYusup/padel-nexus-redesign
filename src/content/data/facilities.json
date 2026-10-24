@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lapangan-indoor",
+    "name": "Lapangan Indoor Berdinding Kaca",
+    "description": "Lapangan berdinding kaca dan jaring baja dengan rumput sintetis hijau, beratap kanopi sehingga tetap nyaman bermain saat cuaca tidak menentu.",
+    "image": "/ai/lapangan-simetris.webp",
+    "imageAlt": "Ilustrasi lapangan padel indoor berdinding kaca dan jaring baja di bawah kanopi"
+  },
+  {
+    "id": "lounge-hangat",
+    "name": "Lounge Hangat",
+    "description": "Area duduk dengan dinding batu hangat, kursi kayu berpadu anyaman hijau, dan layar untuk bersantai setelah bermain.",
+    "image": "/ai/lounge-batu-tv.webp",
+    "imageAlt": "Ilustrasi kursi kayu beranyam hijau di lounge berdinding batu hangat"
+  },
+  {
+    "id": "pandang-lapangan",
+    "name": "Area Duduk Menghadap Lapangan",
+    "description": "Meja dan kursi di sisi dinding kaca, tempat menunggu giliran atau menonton permainan tanpa kehilangan pandangan ke lapangan.",
+    "image": "/ai/meja-hadap-lapangan.webp",
+    "imageAlt": "Ilustrasi meja kayu dan kursi anyam krem menghadap lapangan lewat dinding kaca"
+  },
+  {
+    "id": "loker-pribadi",
+    "name": "Loker Pribadi",
+    "description": "Loker berkunci tersendiri untuk menaruh tas dan barang berharga selama bermain.",
+    "image": "/ai/loker-sage.webp",
+    "imageAlt": "Ilustrasi loker hijau sage berbingkai kuningan dengan kunci terpasang"
+  },
+  {
+    "id": "handuk-dingin",
+    "name": "Handuk Wajah Dingin",
+    "description": "Handuk bergulung yang disimpan dingin, tersedia untuk menyegarkan wajah sebelum atau sesudah bermain.",
+    "image": "/ai/handuk-dingin.webp",
+    "imageAlt": "Ilustrasi tangan mengambil handuk putih bergulung dari dispenser"
+  },
+  {
+    "id": "sudut-minum",
+    "name": "Sudut Minum",
+    "description": "Meja bar dengan perkakas kopi dan cangkir, menempel pada rak kayu bercahaya hangat di sisi lounge.",
+    "image": "/ai/rak-bar-terang.webp",
+    "imageAlt": "Ilustrasi rak kayu bercahaya berisi gelas dan perkakas kopi di atas meja bar"
+  }
+]

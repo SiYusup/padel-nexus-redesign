@@ -1,0 +1,46 @@
+[
+  {
+    "id": "lapangan",
+    "name": "Lapangan Padel Indoor",
+    "description": "Lapangan berdinding kaca dengan rumput sintetis hijau, dirancang untuk bermain nyaman sepanjang hari.",
+    "icon": "Trophy",
+    "image": "/ai/lorong-dinding-kaca.webp",
+    "imageAlt": "Ilustrasi lorong samping lapangan dengan dinding kaca dan bangku anyam krem"
+  },
+  {
+    "id": "lounge",
+    "name": "Lounge & Area Santai",
+    "description": "Tempat duduk hangat berbahan kayu dan batu bata untuk beristirahat, mengobrol, atau menunggu giliran main.",
+    "icon": "Armchair",
+    "image": "/ai/sofa-kaca-batu.webp",
+    "imageAlt": "Ilustrasi sofa krem dan kursi anyam hijau di lounge berdinding terakota"
+  },
+  {
+    "id": "sesi-perkenalan",
+    "name": "Sesi Perkenalan Padel",
+    "description": "Pengantar singkat untuk pemula: aturan dasar, cara memegang raket, dan gerakan pertama dengan santai.",
+    "icon": "Sparkles",
+    "isDummy": true
+  },
+  {
+    "id": "pelatihan",
+    "name": "Pelatihan & Coaching",
+    "description": "Latihan terarah untuk meningkatkan teknik, kebugaran, dan rasa percaya diri di lapangan.",
+    "icon": "Target",
+    "isDummy": true
+  },
+  {
+    "id": "komunitas",
+    "name": "Komunitas & Main Bareng",
+    "description": "Bertemu pemain lain, mencari partner, dan bermain bersama dalam suasana yang ramah.",
+    "icon": "Users",
+    "isDummy": true
+  },
+  {
+    "id": "event",
+    "name": "Acara Komunitas",
+    "description": "Sesi spesial dan acara bersama untuk komunitas, kantor, atau kelompok teman.",
+    "icon": "CalendarHeart",
+    "isDummy": true
+  }
+]

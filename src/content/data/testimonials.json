@@ -1,0 +1,6 @@
+[
+  { "id": "t1", "name": "Rina Contoh", "role": "Manajer pemasaran", "quote": "Awalnya ragu karena belum pernah main raket. Ternyata reli-nya seru dan cepat terasa, saya langsung ketagihan setelah sesi pertama.", "isDummy": true },
+  { "id": "t2", "name": "Hendra Contoh", "role": "Pemilik usaha, 52 tahun", "quote": "Di usia saya, saya khawatir cedera. Penjelasannya jelas dan ritmenya bisa saya atur sendiri, jadi mulai dengan tenang.", "isDummy": true },
+  { "id": "t3", "name": "Alya Contoh", "role": "Mahasiswi", "quote": "Lounge-nya nyaman banget buat kumpul setelah main. Datang bareng teman, pulangnya badan segar dan mood bagus.", "isDummy": true },
+  { "id": "t4", "name": "Bayu Contoh", "role": "Karyawan swasta", "quote": "Lapangannya bersih dan terawat. Sekarang main padel jadi jadwal rutin tiap minggu bareng rekan kantor.", "isDummy": true }
+]

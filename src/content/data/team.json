@@ -1,0 +1,5 @@
+[
+  { "id": "pendiri", "name": "Andi Contoh", "role": "Pendiri", "bio": "Menggagas Padel Demo agar olahraga yang sehat dan seru bisa dinikmati semua umur di Surabaya.", "isDummy": true },
+  { "id": "manajer", "name": "Sari Demo", "role": "Manajer Operasional", "bio": "Memastikan lapangan, lounge, dan jadwal bermain berjalan nyaman setiap hari.", "isDummy": true },
+  { "id": "pelatih", "name": "Bima Fiktif", "role": "Kepala Pelatih", "bio": "Mendampingi pemula sampai pemain berpengalaman dengan latihan yang aman dan terarah.", "isDummy": true }
+]
